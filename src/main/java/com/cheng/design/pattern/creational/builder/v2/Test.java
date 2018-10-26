@@ -1,5 +1,9 @@
 package com.cheng.design.pattern.creational.builder.v2;
 
+import com.google.common.collect.ImmutableSet;
+
+import java.util.Set;
+
 /**
  * 建造者模式演进版：链式调用
  *
@@ -17,6 +21,12 @@ public class Test {
 //                .buildCourseQA("Python课程问答")
                 .build();
 
+
+        // 建造者示例
         System.out.println(course);
+        Set<String> set = ImmutableSet.<String>builder()
+                .add("A")
+                .add("B").build();
+        System.out.println(set);
     }
 }
