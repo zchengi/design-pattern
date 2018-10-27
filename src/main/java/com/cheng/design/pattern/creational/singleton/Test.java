@@ -9,6 +9,10 @@ package com.cheng.design.pattern.creational.singleton;
  * 单例模式：饿汉式
  * <p>
  * 单例模式：枚举单例
+ * <p>
+ * 单例模式：容器单例
+ * <p>
+ * 单例模式：ThreadLocal 线程单例
  *
  * @author cheng
  *         2018/10/26 16:39
@@ -18,12 +22,20 @@ public class Test {
 
 //        LazySingleton lazySingleton = LazySingleton.getInstance();
 
-//        Thread t1 = new Thread(new T());
-//        Thread t2 = new Thread(new T());
-//        t1.start();
-//        t2.start();
+        // ThreadLocal 线程单例 只能实现在一个线程中是单例的
+        System.out.println("main thread" + ThreadLocalInstance.getInstance());
+        System.out.println("main thread" + ThreadLocalInstance.getInstance());
+        System.out.println("main thread" + ThreadLocalInstance.getInstance());
+        System.out.println("main thread" + ThreadLocalInstance.getInstance());
+        System.out.println("main thread" + ThreadLocalInstance.getInstance());
+        System.out.println("main thread" + ThreadLocalInstance.getInstance());
 
-//        System.out.println("program end.");
+        Thread t1 = new Thread(new T());
+        Thread t2 = new Thread(new T());
+        t1.start();
+        t2.start();
+
+        System.out.println("program end.");
 
 
         // 序列化破坏单例模式
@@ -70,7 +82,7 @@ public class Test {
 //        System.out.println(instance == newInstance);
 
 
-        EnumInstance enumInstance = EnumInstance.getInstance();
-        enumInstance.printTest();
+//        EnumInstance enumInstance = EnumInstance.getInstance();
+//        enumInstance.printTest();
     }
 }
