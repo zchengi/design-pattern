@@ -9,6 +9,9 @@ package com.cheng.design.pattern.creational.singleton;
 public class StaticInnerClassSingle {
 
     private StaticInnerClassSingle() {
+        if (InnerClass.staticInnerClassSingle != null) {
+            throw new RuntimeException("单例构造器禁止反射调用");
+        }
     }
 
     public static StaticInnerClassSingle getInstance() {
