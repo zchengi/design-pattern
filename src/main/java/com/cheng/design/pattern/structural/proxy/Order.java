@@ -1,0 +1,27 @@
+package com.cheng.design.pattern.structural.proxy;
+
+/**
+ * @author cheng
+ *         2018/11/2 11:38
+ */
+public class Order {
+
+    private Object orderInfo;
+    private Integer userId;
+
+    public Object getOrderInfo() {
+        return orderInfo;
+    }
+
+    public void setOrderInfo(Object orderInfo) {
+        this.orderInfo = orderInfo;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+}
