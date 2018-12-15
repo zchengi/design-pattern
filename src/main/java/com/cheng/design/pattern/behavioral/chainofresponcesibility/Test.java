@@ -1,6 +1,8 @@
 package com.cheng.design.pattern.behavioral.chainofresponcesibility;
 
 /**
+ * 责任链模式
+ *
  * @author cheng
  *         2018/11/16 13:15
  */
